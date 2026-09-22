@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Divya Gyan Niketan | Deepnagar, Nalanda</title>
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        /* --- CSS Variables & Reset --- */
         :root {
             --primary: #1a365d;
             --primary-light: #2b6cb0;
@@ -19,9 +22,9 @@
             --text-dark: #1f2937;
             --text-light: #6b7280;
             --bg-light: #f3f4f6;
-            --glass-bg: rgba(255, 255, 255, 0.85);
-            --glass-border: rgba(255, 255, 255, 0.4);
-            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+            --glass-bg: rgba(255,255,255,0.85);
+            --glass-border: rgba(255,255,255,0.4);
+            --glass-shadow: 0 8px 32px rgba(31,38,135,0.1);
             --transition: all 0.3s ease;
         }
 
@@ -39,15 +42,14 @@
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             color: var(--text-dark);
-            background-color: var(--bg-light);
+            background: var(--bg-light);
             overflow-x: hidden;
         }
 
-        /* --- Reusable Classes --- */
         .container {
             width: 90%;
             max-width: 1200px;
-            margin: 0 auto;
+            margin: auto;
         }
 
         .section-padding {
@@ -68,10 +70,9 @@
 
         .section-title p {
             color: var(--text-light);
-            font-size: 1rem;
         }
 
-        .section-title .divider {
+        .divider {
             width: 60px;
             height: 4px;
             background: var(--secondary);
@@ -86,40 +87,34 @@
             font-weight: 600;
             text-decoration: none;
             transition: var(--transition);
-            cursor: pointer;
             border: none;
-            font-size: 1rem;
+            cursor: pointer;
         }
 
         .btn-primary {
             background: var(--secondary);
-            color: #fff;
-            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+            color: white;
+            box-shadow: 0 4px 15px rgba(245,158,11,0.3);
         }
 
         .btn-primary:hover {
             background: var(--secondary-hover);
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
         }
 
         .btn-outline {
-            background: transparent;
-            color: #fff;
-            border: 2px solid #fff;
+            color: white;
+            border: 2px solid white;
         }
 
         .btn-outline:hover {
-            background: #fff;
+            background: white;
             color: var(--primary);
-            transform: translateY(-3px);
         }
 
-        /* --- Glassmorphism Card Style --- */
         .glass-card {
             background: var(--glass-bg);
             backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
             border: 1px solid var(--glass-border);
             box-shadow: var(--glass-shadow);
             border-radius: 20px;
@@ -128,21 +123,20 @@
         }
 
         .glass-card:hover {
-            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.15);
             transform: translateY(-5px);
         }
 
-        /* --- Header / Navigation --- */
+        /* HEADER */
+
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            transition: var(--transition);
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255,255,255,0.95);
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
         }
 
         .nav-container {
@@ -188,8 +182,6 @@
             text-decoration: none;
             color: var(--text-dark);
             font-weight: 500;
-            font-size: 0.95rem;
-            transition: var(--transition);
             position: relative;
         }
 
@@ -204,46 +196,49 @@
             transition: var(--transition);
         }
 
-        .nav-links a:hover, .nav-links a.active {
+        .nav-links a:hover,
+        .nav-links a.active {
             color: var(--primary);
         }
 
-        .nav-links a:hover::after, .nav-links a.active::after {
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
             width: 100%;
         }
 
         .mobile-menu-btn {
             display: none;
             font-size: 1.5rem;
-            cursor: pointer;
             color: var(--primary);
             background: none;
             border: none;
+            cursor: pointer;
         }
 
-        /* --- Hero Section --- */
+        /* HERO */
+
         .hero {
             height: 100vh;
             min-height: 600px;
-            background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.9)), 
-                        url('School%20Img.jpeg') center/cover no-repeat;
+
+            background:
+                linear-gradient(
+                    rgba(26,54,93,0.8),
+                    rgba(26,54,93,0.9)
+                ),
+                url('School%20Img.jpeg') center/cover no-repeat;
+
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
+
             padding: 0 20px;
-            position: relative;
         }
 
         .hero-content {
             max-width: 800px;
-            color: #fff;
-            animation: fadeInUp 1s ease;
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+            color: white;
         }
 
         .hero h2 {
@@ -256,7 +251,6 @@
         .hero p {
             font-size: 1.1rem;
             margin-bottom: 30px;
-            font-weight: 300;
             opacity: 0.9;
         }
 
@@ -266,10 +260,11 @@
             justify-content: center;
         }
 
-        /* --- Notice Ticker --- */
+        /* NOTICE */
+
         .ticker-wrap {
             background: var(--secondary);
-            color: #fff;
+            color: white;
             padding: 10px 0;
             display: flex;
             align-items: center;
@@ -280,30 +275,32 @@
             background: var(--primary);
             padding: 5px 20px;
             font-weight: 600;
-            font-size: 0.85rem;
             white-space: nowrap;
             border-radius: 0 5px 5px 0;
             margin-right: 20px;
-            flex-shrink: 0;
         }
 
         .ticker {
-            display: flex;
             white-space: nowrap;
             animation: ticker 20s linear infinite;
         }
 
         .ticker span {
             margin-right: 50px;
-            font-size: 0.95rem;
         }
 
         @keyframes ticker {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
         }
 
-        /* --- About Section --- */
+        /* ABOUT */
+
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -324,10 +321,6 @@
             text-align: justify;
         }
 
-        .about-image {
-            position: relative;
-        }
-
         .about-image img {
             width: 100%;
             border-radius: 20px;
@@ -335,15 +328,13 @@
         }
 
         .badge-building {
-            position: absolute;
-            bottom: -20px;
-            right: -20px;
             background: var(--secondary);
-            color: #fff;
+            color: white;
             padding: 20px;
             border-radius: 15px;
             text-align: center;
-            box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
+            margin-top: 15px;
+            display: inline-block;
         }
 
         .badge-building span {
@@ -352,9 +343,14 @@
             font-weight: 700;
         }
 
-        /* --- Principal Section --- */
+        /* PRINCIPAL */
+
         .principal-section {
-            background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+            background: linear-gradient(
+                135deg,
+                #f0f4f8 0%,
+                #e2e8f0 100%
+            );
         }
 
         .principal-card {
@@ -362,7 +358,7 @@
             gap: 40px;
             align-items: center;
             max-width: 1000px;
-            margin: 0 auto;
+            margin: auto;
         }
 
         .principal-img {
@@ -380,6 +376,519 @@
 
         .principal-img h4 {
             margin-top: 15px;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .principal-img p {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .principal-content h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .principal-content p {
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .principal-signature {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* FACILITIES */
+
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(280px, 1fr)
+            );
+            gap: 30px;
+        }
+
+        .facility-card {
+            text-align: center;
+            padding: 40px 25px;
+        }
+
+        .facility-icon {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .facility-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .facility-card p {
+            color: var(--text-light);
+        }
+
+        /* CONTACT */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+        }
+
+        .contact-info {
+            background: var(--primary);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .info-item i {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+
+        .info-item h4 {
+            margin-bottom: 5px;
+        }
+
+        .info-item p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .contact-form {
+            padding: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(250px,1fr)
+            );
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .footer-col p {
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul a {
+            color: #94a3b8;
+            text-decoration: none;
+        }
+
+        .footer-col ul a:hover {
+            color: var(--secondary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 992px) {
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .principal-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+
+            .section-padding {
+                padding: 50px 0;
+            }
+
+            .ticker-title {
+                padding: 5px 10px;
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+    <div class="nav-container">
+
+        <a href="#home" class="logo">
+
+            <i class="fas fa-graduation-cap"></i>
+
+            <div class="logo-text">
+                <h1>DIVYA GYAN NIKETAN</h1>
+                <span>In Pursuit of Excellence</span>
+            </div>
+
+        </a>
+
+        <button class="mobile-menu-btn" id="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav>
+            <ul class="nav-links" id="nav-links">
+
+                <li>
+                    <a href="#home" class="active">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About Us</a>
+                </li>
+
+                <li>
+                    <a href="#principal">Principal's Message</a>
+                </li>
+
+                <li>
+                    <a href="#facilities">Facilities</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact Us</a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h2>
+            Nurturing Minds,<br>
+            Building Character
+        </h2>
+
+        <p>
+            Welcome to Divya Gyan Niketan Institute -
+            Empowering the youth of Deepnagar, Nalanda
+            with modern education rooted in strong moral values.
+        </p>
+
+        <div class="hero-btns">
+
+            <a href="#contact" class="btn btn-primary">
+                Admissions Open
+            </a>
+
+            <a href="#about" class="btn btn-outline">
+                Explore School
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- NOTICE -->
+
+<div class="ticker-wrap">
+
+    <div class="ticker-title">
+        <i class="fas fa-bullhorn"></i>
+        NOTICES
+    </div>
+
+    <div class="ticker">
+
+        <span>
+            Admissions open for the upcoming academic session!
+            Visit the campus in Deepnagar, Nalanda for registration details.
+        </span>
+
+        <span>
+            Mid-term examinations scheduled from next month.
+        </span>
+
+        <span>
+            Parent-Teacher meeting will be held on the last Saturday of this month.
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- ABOUT -->
+
+<section class="section-padding" id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>About Our Institute</h2>
+
+            <p>
+                Excellence in education and character building
+            </p>
+
+            <div class="divider"></div>
+
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <h3>Welcome to Divya Gyan Niketan</h3>
+
+                <p>
+                    Divya Gyan Niketan is an educational institution
+                    located in Deepnagar, Nalanda, Bihar.
+                    Our aim is to provide quality education while
+                    developing discipline, confidence and moral values
+                    among students.
+                </p>
+
+                <p>
+                    We believe that education is not only about academic
+                    achievement but also about developing responsible,
+                    knowledgeable and compassionate citizens.
+                </p>
+
+                <div class="badge-building">
+
+                    <span>2004</span>
+
+                    Established
+
+                </div>
+
+            </div>
+
+
+            <!-- SCHOOL IMAGE ONLY -->
+
+            <div class="about-image">
+
+                <img
+                    src="School%20Img.jpeg"
+                    alt="Divya Gyan Niketan School Building"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PRINCIPAL -->
+
+<section class="section-padding principal-section" id="principal">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Principal's Message</h2>
+
+            <div class="divider"></div>
+
+        </div>
+
+
+        <div class="principal-card glass-card">
+
+            <!-- PRINCIPAL IMAGE ONLY -->
+
+            <div class="principal-img">
+
+                <img
+                    src="Principal%20Img.jpeg"
+                    alt="Principal of Divya Gyan Niketan"
+                >
+
+                <h4>Dinesh Prasad</h4>
+
+                <p>Principal</p>
+
+            </div>
+
+
+            <div class="principal-content">
+
+                <h3>
+                    "Education is the most powerful tool
+                    for shaping the future."
+                </h3>
+
+                <p>
+                    At Divya Gyan Niketan, we strive to create an
+                    environment where every child can learn,
+                    explore and grow with confidence.
+                </p>
+
+                <p>
+                    Our dedicated teachers work together to provide
+                    students with academic knowledge as well as
+                    strong values, discipline and responsibility.
+                </p>
+
+                <p>
+                    We encourage our students to dream big,
+                    work hard and always remain humble and
+                    respectful towards others.
+                </p>
+
+                <div class="principal-signature">
+                    — Dinesh Prasad
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FACILITIES -->
+
+<section class="section-padding" id="facilities">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Our Facilities</h2>
+
+            <p>
+                Supporting students in every aspect of learning
+  argin-top: 15px;
             color: var(--primary);
             font-size: 1.2rem;
         }
